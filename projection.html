@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benjamin Smallwood 408-D01</title>
+
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="projection.html" class="ui-btn-active ui-state-persist">Mission Trip Projection</a></li>
+                <li><a href="index.html">My Details</a></li>
+                <li><a href="missionary.html">Missionary</a></li>
+                </li>
+            </ul>
+        </div>
+        <div data-role="header">
+            Destiny Church - Projection Page
+        </div>
+        <div data-role="content" onload="initialize()">
+            <form action="#" id="costForm">
+                <label for="numOfPeople">Number of People:</label>
+                <input type="range" name="numOfPeople" id="numOfPeople" min="1" max="20">
+                <label for="daysOfTrip">Days of Trip:</label>
+                <input type="number" name="daysOfTrip" id="daysOfTrip" min="1" max="10" placeholder="Days of Trip">
+                <br>
+                <fieldset data-role="controlgroup">
+                    <legend>Select Location: </legend>
+                    <input type="radio" name="location" id="locationOne" value="500">
+                    <label for="locationOne">Haiti</label>
+                    <input type="radio" name="location" id="locationTwo" value="400">
+                    <label for="locationTwo">Guam</label>
+                    <input type="radio" name="location" id="locationThree" value="300">
+                    <label for="locationThree">Honduras</label>
+                </fieldset>
+                <button onclick="calculate()" id="go">Calculate Cost</button>
+            </form>
+            <br>
+            <table id="data">
+                <tr>
+                    <td>Number of People entered:</td>
+                    <td id="numOfPeopleDisplay">0</td>
+                    <td>people</td>
+                </tr>
+                <tr>
+                    <td>Days of Trip Entered:</td>
+                    <td id="daysOfTripDisplay">0</td>
+                    <td>days</td>
+                </tr>
+                <tr>
+                    <td>Total Cost of Trip: </td>
+                    <td id="totalCostDisplay">0</td>
+                </tr>
+            </table>
+        </div>
+        <div data-role="footer">
+            <small>Destiny Church of Christ</small>
+        </div>
+    </div>
+</body>
+
+
+</html>
